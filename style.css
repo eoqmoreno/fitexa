@@ -1,0 +1,230 @@
+@font-face {
+    font-family: Segoe;
+    src: url(./font/Segoe\ UI.ttf);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Segoe;
+    font-size: 16px;
+    color: #5A5A5A;
+}
+
+h6 {
+    color: #009E49;
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.flex .row {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    flex-direction: row;
+}
+
+.flex .column {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    flex-direction: column;
+}
+
+.header {
+    background-color: #007AC2;
+    height: 5vh;
+    padding: 2vw 2vh;
+    gap: 20px;
+
+    display: flex;
+    align-items: center;
+    flex: 1;
+    flex-direction: row;
+
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    border-bottom: 4px solid;
+    border-image: linear-gradient(to right, #009E49, #C9DA2A) 1;
+}
+
+.header img {
+    height: 75%;
+    color: white;
+}
+
+.header .menu-header {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.header .menu-header a {
+    color: white;
+    text-decoration: none;
+}
+
+.banner {
+    background-image: url(imgs/pexels-william-fortunato-6140676.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    background-attachment: fixed;
+    height: 70vh;
+}
+
+.banner .banner-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 0 4vw;
+    gap: 12px;
+    height: 100%;
+    background-image: linear-gradient(to right, #ffffff, #c8da2a00);
+}
+
+@keyframes bannerTextImg {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.banner .banner-text img {
+    width: 30vw;
+    animation-name: bannerTextImg;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.banner .banner-text button {
+    border: none;
+    background-color: #009E49;
+    padding: 8px 16px;
+    font-size: 18px;
+    font-family: Segoe UI;
+    border-radius: 4px;
+    color: white;
+}
+
+.programa {
+    display: flex;
+    flex-direction: row;
+    height: 70vh;
+    flex-wrap: wrap;
+}
+
+.programa .sideA {
+    flex: 0.6;
+    display: flex;
+    flex-direction: column;
+    padding: 4vh 4vw;
+    justify-content: center;
+    gap: 12px;
+}
+
+.programa .sideB {
+    flex: 0.4;
+    display: flex;
+    flex-direction: column;
+    padding: 8vh 4vw;
+    justify-content: center;
+    gap: 12px;
+    background-color: #EDECE3;
+}
+
+.programa .descricao {
+    display: flex;
+    flex-direction: row;
+    padding: 8vh 4vw;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background-color: #C9DA2A;
+    color: black;
+    width: 100vw;
+}
+
+.programa .descricao p {
+    width: 40vw;
+    text-align: center;
+}
+
+.programa .descricao img {
+    width: 5vw;
+}
+
+.programa .datasImportantes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8vh 0;
+    gap: 40px;
+    background-color: #007AC2;
+    color: white;
+    width: 100vw;
+}
+
+.programa .datasImportantes h6 {
+    color: white;
+}
+
+.programa .datasImportantes .cardGroup {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.programa .datasImportantes .card {
+    border-bottom: 3px solid white;
+    padding: 0 4vw;
+    flex: 1;
+}
+
+.programa .datasImportantes .card .important {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.programa .datasImportantes .inscricoes {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    width: 50vw;
+    border-radius: 8px;
+    color: #007AC2;
+    padding: 2vh 2vw;
+}
+
+.programa .datasImportantes .inscricoes button {
+    border: none;
+    background-color: #007AC2;
+    padding: 8px 16px;
+    font-size: 18px;
+    font-family: Segoe UI;
+    border-radius: 4px;
+    color: white;
+    text-wrap: nowrap;
+}
