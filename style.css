@@ -21,26 +21,17 @@ h6 {
 p {
     margin: 0;
     padding: 0;
+    max-width: 72ch;
 }
 
-.flex .row {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    flex-direction: row;
-}
-
-.flex .column {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    flex-direction: column;
+button {
+    font-weight: bold;
 }
 
 .header {
     background-color: #007AC2;
     height: 5vh;
-    padding: 2vw 2vh;
+    padding: 2vh 6vw;
     gap: 20px;
 
     display: flex;
@@ -76,7 +67,7 @@ p {
 .banner {
     background-image: url(imgs/pexels-william-fortunato-6140676.jpg);
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
     background-position: center;
     background-attachment: fixed;
     height: 70vh;
@@ -89,7 +80,7 @@ p {
     justify-content: center;
     align-items: flex-start;
 
-    padding: 0 4vw;
+    padding: 0 6vw;
     gap: 12px;
     height: 100%;
     background-image: linear-gradient(to right, #ffffff, #c8da2a00);
@@ -113,7 +104,11 @@ p {
     animation-fill-mode: forwards;
 }
 
-.banner .banner-text button {
+.banner .banner-text p {
+    width: 40%;
+}
+
+.banner .banner-text a {
     border: none;
     background-color: #009E49;
     padding: 8px 16px;
@@ -121,12 +116,12 @@ p {
     font-family: Segoe UI;
     border-radius: 4px;
     color: white;
+    text-decoration: none;
 }
 
 .programa {
     display: flex;
     flex-direction: row;
-    height: 70vh;
     flex-wrap: wrap;
 }
 
@@ -134,7 +129,7 @@ p {
     flex: 0.6;
     display: flex;
     flex-direction: column;
-    padding: 4vh 4vw;
+    padding: 4vh 6vw;
     justify-content: center;
     gap: 12px;
 }
@@ -143,7 +138,7 @@ p {
     flex: 0.4;
     display: flex;
     flex-direction: column;
-    padding: 8vh 4vw;
+    padding: 8vh 6vw;
     justify-content: center;
     gap: 12px;
     background-color: #EDECE3;
@@ -162,12 +157,12 @@ p {
 }
 
 .programa .descricao p {
-    width: 40vw;
+    width: 50vw;
     text-align: center;
 }
 
 .programa .descricao img {
-    width: 5vw;
+    height: 60px;
 }
 
 .programa .datasImportantes {
@@ -195,36 +190,256 @@ p {
 }
 
 .programa .datasImportantes .card {
-    border-bottom: 3px solid white;
-    padding: 0 4vw;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px
 }
 
 .programa .datasImportantes .card .important {
+    width: 100%;
     font-size: 20px;
     font-weight: bold;
+    /* border-bottom: 3px solid white; */
+    text-align: center;
+    padding-bottom: 12px;
+}
+
+.programa .datasImportantes .card .line {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.programa .datasImportantes .card .line .partOne {
+    background: white;
+    flex: 0.47;
+    height: 4px;
+}
+
+.programa .datasImportantes .card .line .circle {
+    background: white;
+    border-radius: 50%;
+    flex: 0.06;
+    aspect-ratio: 1/1;
 }
 
 .programa .datasImportantes .inscricoes {
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    width: 50vw;
-    border-radius: 8px;
+    border: none;
+    background-color: #ffffff;
+    padding: 8px 16px;
+    font-size: 18px;
+    font-family: Segoe UI;
+    border-radius: 100px;
     color: #007AC2;
-    padding: 2vh 2vw;
+    text-wrap: nowrap;
+    text-decoration: none;
 }
 
-.programa .datasImportantes .inscricoes button {
+.programa .diferenciais {
+    padding: 8vh 4vw;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.programa .diferenciais h6 {
+    color: #5A5A5A;
+}
+
+.programa .diferenciais .cardGroup {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.programa .diferenciais .cardGroup .card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+}
+
+.programa .diferenciais .cardGroup .card img {
+    height: 60px;
+}
+
+.eletrobras {
+    display: flex;
+    flex-direction: row;
+    padding: 8vh 4vw;
+    background-image: url(./imgs/backgroundEletrobras.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-position-x: left;
+    gap: 40px;
+}
+
+.eletrobras .sideA {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.eletrobras .sideA .video {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+}
+
+.eletrobras .sideB {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 40px;
+    text-align: right;
+}
+
+
+.eletrobras .sideB img {
+    max-height: 60px;
+}
+
+.exacta {
+    display: flex;
+    flex-direction: row;
+    padding: 8vh 4vw;
+    background-image: url(./imgs/backgroundExACTa.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: right;
+    gap: 40px;
+}
+
+.exacta .sideA {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.exacta .sideA video {
+    /* width: 100%;
+    border-radius: 10px; */
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+}
+
+.exacta .sideB {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    text-align: left;
+}
+
+
+.exacta .sideB img {
+    max-height: 60px;
+}
+
+.perguntas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8vh 4vw;
+    gap: 40px;
+    background-color: #EDECE3;
+}
+
+.perguntas h6 {
+    color: #5A5A5A;
+}
+
+.perguntas .cardGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.perguntas .cardGroup .card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #5A5A5A;
+}
+
+.perguntas .cardGroup .card .title {
+    font-weight: bold;
+}
+
+.perguntas .button {
     border: none;
     background-color: #007AC2;
     padding: 8px 16px;
     font-size: 18px;
     font-family: Segoe UI;
-    border-radius: 4px;
+    border-radius: 100px;
     color: white;
-    text-wrap: nowrap;
+    text-decoration: none;
+}
+
+.footer {
+    background-color: #5A5A5A;
+    padding: 8vh 4vw;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.footer a {
+    color: white
+}
+
+.footer h6 {
+    color: white;
+}
+
+.footer .sideA {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.footer .sideB {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .sideB .linkGroup {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logos {
+    background-color: #5A5A5A;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-bottom: 8vh;
+    justify-content: center;
+}
+
+.logos img {
+    max-height: 40px;
 }
