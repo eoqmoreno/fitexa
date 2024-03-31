@@ -3,7 +3,6 @@
 
 <head>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ExACTa SPARK</title>
@@ -12,30 +11,47 @@
 <body>
 
     <div class="header">
-        <img src="./imgs/logoSparkWhite.svg" alt="Logo do programa SPARK">
-        <img src="./imgs/LogoExACTaWhite.svg" alt="Logo da ExACTa">
-        <img src="./imgs/LogoEletrobrasWhite.svg" alt="Logo da Eletrobras">
-
-        <div class="menu-header">
-            <a href="#programa">
-                Programa
-            </a>
-
-            <a href="#eletrobras">
-                Sobre a Eletrobras
-            </a>
-
-            <a href="#exacta">
-                Sobre a ExACTa
-            </a>
-
-            <a href="#perguntas">
-                Dúvidas frequentes
-            </a>
+        <div class="logo">
+            <div class="logo-group">
+                <img src="./imgs/logoSparkWhite.svg" alt="Logo do programa SPARK">
+                <img src="./imgs/LogoExACTaWhite.svg" alt="Logo da ExACTa">
+                <img src="./imgs/LogoEletrobrasWhite.svg" alt="Logo da Eletrobras">
+            </div>
+            <div class="menu-hide" onclick="hideShow('menu-header')">
+                <img src="./imgs/menu.svg" class="icon" id="menu-icon" alt="Ícone de menu para abrir o menu">
+            </div>
         </div>
+
+
+        <ul class="menu-header" id="menu-header">
+            <li>
+                <a href="#programa">
+                    Programa
+                </a>
+            </li>
+
+            <li>
+                <a href="#eletrobras">
+                    Sobre a Eletrobras
+                </a>
+            </li>
+
+            <li>
+                <a href="#exacta">
+                    Sobre a ExACTa
+                </a>
+            </li>
+
+            <li>
+                <a href="#perguntas">
+                    Dúvidas frequentes
+                </a>
+            </li>
+        </ul>
+
     </div>
 
-    <div class="banner">
+    <div class="banner" id="banner">
         <div class="banner-text">
             <img src="./imgs/LogoExactaSPARK.svg" alt="Marca que junta a logo da ExACTa com a do programa SPARK">
 
@@ -56,165 +72,171 @@
             </h6>
 
             <p>
-                Na sua 2ª edição, o programa de formação em inovação tecnológica da ExACTa estabelece uma parceria com a
-                Eletrobras para desenvolver talentos e promover o surgimento de soluções tecnológicas inovadoras para os
+                Na sua 2ª edição, o programa de formação em inovação tecnológica da ExACTa estabelece uma parceria
+                com a
+                Eletrobras para desenvolver talentos e promover o surgimento de soluções tecnológicas inovadoras
+                para os
                 desafios de negócio da companhia.
             </p>
             <p>
                 Alunos dos cursos de graduação e pós-graduação da PUC-Rio serão selecionados para formar equipes
-                multidisciplinares de desenvolvimento ágil e terão a oportunidade de conhecer o negócio da Eletrobras,
+                multidisciplinares de desenvolvimento ágil e terão a oportunidade de conhecer o negócio da
+                Eletrobras,
                 alguns de seus desafios e de se conectar diretamente com os times de inovação da companhia.
             </p>
         </div>
 
         <div class="sideB">
             <i>
-                “Além da possibilidade de colocar os conhecimentos em prática e desenvolver soluções para os desafios da
-                maior empresa de energia elétrica da América Latina, o trabalho dos estudantes será observado pelo time
-                Eletrobras. Essa é uma oportunidade única para <b>promover a inovação digital no segmento de energia e o
+                “Além da possibilidade de colocar os conhecimentos em prática e desenvolver soluções para os
+                desafios da
+                maior empresa de energia elétrica da América Latina, o trabalho dos estudantes será observado pelo
+                time
+                Eletrobras. Essa é uma oportunidade única para <b>promover a inovação digital no segmento de energia
+                    e o
                     desenvolvimento de soluções</b> e, ainda, para uma eventual contratação futura”
             </i>
             <p>
                 reforça o vice-presidente de Tecnologia e Inovação, Juliano Dantas.
             </p>
         </div>
+    </div>
 
-        <div class="descricao">
-            <img src="./imgs/calendar.svg" alt="icone de calendario">
-            <p>
-                Durante <b>6 meses, 20 alunos</b> selecionados trabalharão em soluções para dois desafios reais de
-                negócio da
-                Eletrobras, como protagonistas no desenvolvimento de projetos de inovação tecnológica em cocriação com a
-                equipe da companhia.
-            </p>
-            <img src="./imgs/student.svg" alt="icone de estudante">
-        </div>
+    <div class="descricao">
+        <img src="./imgs/calendar.svg" alt="icone de calendario">
+        <p>
+            Durante <b>6 meses, 20 alunos</b> selecionados trabalharão em soluções para dois desafios reais de
+            negócio da
+            Eletrobras, como protagonistas no desenvolvimento de projetos de inovação tecnológica em cocriação
+            com a
+            equipe da companhia.
+        </p>
+        <img src="./imgs/student.svg" alt="icone de estudante">
+    </div>
 
-        <div class="datasImportantes">
-            <h6>
-                Datas importantes
-            </h6>
+    <div class="datasImportantes">
+        <h6>
+            Datas importantes
+        </h6>
 
-            <div class="cardGroup">
+        <div class="cardGroup">
 
-                <div class="card">
-                    <p class="important">
-                        09 de abril
-                    </p>
-                    <div class="line">
-                        <div class="partOne">
-                        </div>
-                        <div class="circle">
-                        </div>
-                        <div class="partOne">
-                        </div>
+            <div class="card">
+                <p class="important">
+                    09 de abril
+                </p>
+                <div class="line">
+                    <div class="partOne">
                     </div>
-                    <p>
-                        fim das inscrições
-                    </p>
-                </div>
-
-                <div class="card">
-                    <p class="important">
-                        15 a 26 de abril
-                    </p>
-                    <div class="line">
-                        <div class="partOne">
-                        </div>
-                        <div class="circle">
-                        </div>
-                        <div class="partOne">
-                        </div>
+                    <div class="circle">
                     </div>
-                    <p>
-                        etapa de entrevistas
-                    </p>
-                </div>
-
-                <div class="card">
-                    <p class="important">
-                        29 de abril
-                    </p>
-                    <div class="line">
-                        <div class="partOne">
-                        </div>
-                        <div class="circle">
-                        </div>
-                        <div class="partOne">
-                        </div>
+                    <div class="partOne">
                     </div>
-                    <p>
-                        divulgação do resultado
-                    </p>
                 </div>
-
-                <div class="card">
-                    <p class="important">
-                        06 de maio
-                    </p>
-                    <div class="line">
-                        <div class="partOne">
-                        </div>
-                        <div class="circle">
-                        </div>
-                        <div class="partOne">
-                        </div>
-                    </div>
-                    <p>
-                        início das atividades
-                    </p>
-                </div>
-
+                <p>
+                    fim das inscrições
+                </p>
             </div>
 
-            <a href="https://forms.gle/qvgAL6CjJTxWD8tP8" target="_blank" class="inscricoes">Inscreva-se agora</a>
+            <div class="card">
+                <p class="important">
+                    15 a 26 de abril
+                </p>
+                <div class="line">
+                    <div class="partOne">
+                    </div>
+                    <div class="circle">
+                    </div>
+                    <div class="partOne">
+                    </div>
+                </div>
+                <p>
+                    etapa de entrevistas
+                </p>
+            </div>
+
+            <div class="card">
+                <p class="important">
+                    29 de abril
+                </p>
+                <div class="line">
+                    <div class="partOne">
+                    </div>
+                    <div class="circle">
+                    </div>
+                    <div class="partOne">
+                    </div>
+                </div>
+                <p>
+                    divulgação do resultado
+                </p>
+            </div>
+
+            <div class="card">
+                <p class="important">
+                    06 de maio
+                </p>
+                <div class="line">
+                    <div class="partOne">
+                    </div>
+                    <div class="circle">
+                    </div>
+                    <div class="partOne">
+                    </div>
+                </div>
+                <p>
+                    início das atividades
+                </p>
+            </div>
 
         </div>
 
-        <div class="diferenciais">
-            <h6>
-                Diferenciais
-            </h6>
+        <a href="https://forms.gle/qvgAL6CjJTxWD8tP8" target="_blank">Inscreva-se agora</a>
 
-            <div class="cardGroup">
+    </div>
 
-                <div class="card">
-                    <img src="./imgs/money.svg">
-                    <p>
-                        Financiamento de bolsas para alunos de graduação e pós-graduação
-                    </p>
-                </div>
+    <div class="diferenciais">
+        <h6>
+            Diferenciais
+        </h6>
 
-                <div class="card">
-                    <img src="./imgs/hand.svg">
-                    <p>
-                        Atuação em cocriação entre as equipes da PUC-Rio e Eletrobras
-                    </p>
-                </div>
+        <div class="cardGroup">
 
-                <div class="card">
-                    <img src="./imgs/book.svg">
-                    <p>
-                        Aprendizagem usando metodologia baseada em Pesquisa, Desenvolvimento e Inovação
-                    </p>
-                </div>
-
-                <div class="card">
-                    <img src="./imgs/place.svg">
-                    <p>
-                        Laboratório exclusivo dentro da PUC-Rio dedicado à iniciativa
-                    </p>
-                </div>
-
-                <div class="card">
-                    <img src="./imgs/professor.svg">
-                    <p>
-                        Professores doutores associados à PUC-Rio com ampla experiência em projetos em colaboração com a
-                        indústria
-                    </p>
-                </div>
-
+            <div class="card">
+                <img src="./imgs/money.svg" alt="ícone com uma mão em verde segurando dinheiro">
+                <p>
+                    Financiamento de bolsas para alunos de graduação e pós-graduação
+                </p>
             </div>
+
+            <div class="card">
+                <img src="./imgs/hand.svg" alt="ícone com duas mãos em azul escuro se comprimentando">
+                <p>
+                    Atuação em cocriação entre as equipes da PUC-Rio e Eletrobras
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="./imgs/book.svg" alt="ícone de um livro em vermelho">
+                <p>
+                    Aprendizagem usando metodologia baseada em Pesquisa, Desenvolvimento e Inovação
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="./imgs/place.svg" alt="ícone de um prédio em amarelo">
+                <p>
+                    Laboratório exclusivo dentro da PUC-Rio dedicado à iniciativa
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="./imgs/professor.svg" alt="ícone de um professor em azul claro">
+                <p>
+                    Professores doutores associados à PUC-Rio com ampla experiência em projetos em colaboração com a indústria
+                </p>
+            </div>
+
         </div>
     </div>
 
@@ -227,11 +249,14 @@
         </div>
 
         <div class="sideB">
-            <img src="./imgs/logoEletrobrasVertical.svg">
+            <img src="./imgs/logoEletrobrasVertical.svg" alt="logo colorida da empresa Eletrobras, formada por três cores, azul na base, verde no meio e um verde amarelado no topo formando uma forma parecida como uma folha de planta">
             <p>
-                A Eletrobras é a maior companhia do setor elétrico da América Latina. Líder em geração e transmissão de
-                energia elétrica no país, contribui para que a matriz energética brasileira seja uma das mais limpas e
-                renováveis do mundo. Tem como visão de futuro ser uma empresa inovadora de energia limpa, reconhecida
+                A Eletrobras é a maior companhia do setor elétrico da América Latina. Líder em geração e transmissão
+                de
+                energia elétrica no país, contribui para que a matriz energética brasileira seja uma das mais limpas
+                e
+                renováveis do mundo. Tem como visão de futuro ser uma empresa inovadora de energia limpa,
+                reconhecida
                 pela excelência e sustentabilidade.
             </p>
         </div>
@@ -239,10 +264,12 @@
 
     <div class="exacta" id="exacta">
         <div class="sideB">
-            <img src="./imgs/logoExACTaVertical.svg">
+            <img src="./imgs/logoExACTaVertical.svg" alt="logo colorida da empresa ExACTa com a escrita ExACTa e um ícone formado por um quadrado e 3 listras na diagonal em azul no topo, amarelo no meio e vermelho na base">
             <p>
-                ExACTa é uma iniciativa da PUC-Rio de experimentação ágil e cocriação para transformação digital, com
-                distinta expertise nas áreas de Ciência de Dados, Inteligência Artificial e User Experience (UX). Sua
+                ExACTa é uma iniciativa da PUC-Rio de experimentação ágil e cocriação para transformação digital,
+                com
+                distinta expertise nas áreas de Ciência de Dados, Inteligência Artificial e User Experience (UX).
+                Sua
                 missão é estreitar os laços entre pesquisa e desenvolvimento, aplicando tecnologias de ponta para
                 desencadear inovação e excelência operacional nas empresas parceiras.
             </p>
@@ -253,9 +280,6 @@
                 title="Comunidade da Lúcia – Campanha Eletrobrasilidade – Eletrobras" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <!-- <video controls>
-                <source src="./videos/CTC_inf_EXACTA.mp4" type="video/mp4">
-            </video> -->
         </div>
     </div>
 
@@ -266,20 +290,20 @@
 
         <div class="cardGroup">
             <div class="card">
-                <p class="title">
+                <p class="title" onclick="hideShow('quem-pode')">
                     Quem pode participar?
                 </p>
-                <p>
+                <p id="quem-pode">
                     Estudantes regularmente matriculados em cursos de graduação e pós-graduação de todos os
                     departamentos da PUC-Rio, não havendo limite de idade.
                 </p>
             </div>
 
             <div class="card">
-                <p class="title">
+                <p class="title" onclick="hideShow('qual-local')">
                     Qual local, horário e carga semanal de trabalho?
                 </p>
-                <p>
+                <p id="qual-local">
                     As atividades do programa são realizadas de segunda à sexta, das 15h às 19h, somando um total
                     semanal de 20 horas de trabalho. As atividades do programa serão realizadas presencialmente no
                     ExACTa, localizado no prédio Padre Laércio, no campus da PUC-Rio na Gávea, no Rio de Janeiro.
@@ -287,30 +311,34 @@
             </div>
 
             <div class="card">
-                <p class="title">
-                    Posso fazer algum estágio ou ter um emprego durante minha participação no programa?
+                <p class="title" onclick="hideShow('a-participacao')">
+                    A participação no programa é remunerada?
                 </p>
-                <p>
-                    Sim, os participantes serão remunerados de acordo com o nível de formação acadêmica:
-                </p>
-                <p>
-                    Alunos de Graduação - R$ 910,00 + desconto de R$ 2.800,00 no valor da mensalidade;
-                    Alunos de Mestrado - R$ 2.500,00 e
-                    Alunos de Doutorado - R$ 4.290,00.
-                </p>
-                <p>
+                <div id="a-participacao">
+                    <p>
+                        Sim, os participantes serão remunerados de acordo com o nível de formação acadêmica:
+                    </p>
+                    <p>
+                        Alunos de Graduação - R$ 910,00 + desconto de R$ 2.800,00 no valor da mensalidade;
+                        Alunos de Mestrado - R$ 2.500,00 e
+                        Alunos de Doutorado - R$ 4.290,00.
+                    </p>
+                    <p>
 
-                    Além destes valores, os alunos também receberão um notebook para utilizarem enquanto estiverem
-                    participando do programa.
-                </p>
+                        Além destes valores, os alunos também receberão um notebook para utilizarem enquanto estiverem
+                        participando do programa.
+                    </p>
+                </div>
+
             </div>
 
             <div class="card">
-                <p class="title">
+                <p class="title" onclick="hideShow('posso-fazer')">
                     Posso fazer algum estágio ou ter um emprego durante minha participação no programa?
                 </p>
-                <p>
-                    Não. Os alunos selecionados não poderão manter vínculo empregatício com qualquer instituição durante
+                <p id="posso-fazer">
+                    Não. Os alunos selecionados não poderão manter vínculo empregatício com qualquer instituição
+                    durante
                     o período de realização do programa.
                 </p>
             </div>
@@ -361,13 +389,19 @@
     </div>
 
     <div class="logos">
-        <img src="./imgs/logoSparkWhite.svg">
-        <img src="imgs/LogoExACTaWhite.svg">
-        <img src="imgs/Logo DI_footer.svg">
-        <img src="imgs/Logo PUC-Rio_footer.svg">
-        <img src="imgs/LogoEletrobrasWhite.svg">
+        <img src="./imgs/logoSparkWhite.svg" alt="logo do programa SPARK">
+        <img src="imgs/LogoExACTaWhite.svg" alt="logo da empresa ExACTa">
+        <img src="imgs/LogoEletrobrasWhite.svg" alt="logo da empresa Eletrobras">
+        <img src="imgs/Logo PUC-Rio_footer.svg" alt="logo da Pontifícia Universidade Católica do Rio de Janeiro">
+        <img src="imgs/Logo DI_footer.svg" alt="logo do departamento de informática da PUC-Rio">
     </div>
 
+    <a href="#banner" class="move-up">
+        <img src="/imgs/circle-up.svg" alt="botão para voltar ao topo da página">
+    </a>
+
 </body>
+
+<script src="script.js"></script>
 
 </html>
