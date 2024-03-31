@@ -459,7 +459,13 @@ button {
     flex-direction: column;
     gap: 12px;
     padding-bottom: 12px;
+    padding-top: 12px;
     border-bottom: 2px solid #5A5A5A;
+}
+
+.perguntas .cardGroup .card:hover {
+    box-shadow: 0 0 20px 20px #ffffff85;
+    background-color: #ffffff85
 }
 
 .perguntas .cardGroup .card #quem-pode,
@@ -471,11 +477,15 @@ button {
     gap: 12px
 }
 
-
-
 .perguntas .cardGroup .card .title {
     font-weight: bold;
     cursor: pointer;
+    background-image: url(./imgs/chevron-down.svg);
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: top;
+    padding-right: 16px;
 }
 
 .perguntas .button {
@@ -556,7 +566,7 @@ button {
     height: 40px;
 }
 
-.move-up{
+.move-up {
     position: fixed;
     bottom: 50px;
     right: 50px;
@@ -564,7 +574,7 @@ button {
 
 }
 
-.move-up img{
+.move-up img {
     height: 4vh;
     background-color: #5A5A5A;
     border-radius: 100%;
@@ -613,6 +623,10 @@ button {
         height: 50vh;
     }
 
+    .banner .banner-text {
+        padding: 0 10vw;
+    }
+
     .banner .banner-text p {
         width: 60%;
     }
@@ -625,13 +639,13 @@ button {
 
     .programa .sideA {
         flex: 1;
-        padding: 6vh 6vw;
+        padding: 6vh 10vw;
         margin: auto;
     }
 
     .programa .sideB {
         flex: 1;
-        padding: 6vh 6vw;
+        padding: 6vh 10vw;
         align-items: center;
     }
 
@@ -641,7 +655,7 @@ button {
 
     .descricao {
         flex-direction: column;
-        padding: 4vh 4vw;
+        padding: 4vh 10vw;
         gap: 40px;
         height: fit-content;
     }
@@ -679,6 +693,10 @@ button {
         aspect-ratio: 1/1;
     }
 
+    .diferenciais {
+        padding: 8vh 10vw;
+    }
+
     .diferenciais .cardGroup {
         flex-direction: column;
         gap: 60px;
@@ -696,8 +714,13 @@ button {
         width: 100%;
     }
 
+    .perguntas {
+        padding: 8vh 10vw;
+    }
+
     .footer {
         flex-direction: column;
+        padding: 8vh 10vw;
         gap: 60px;
     }
 
@@ -716,7 +739,7 @@ button {
 
     .eletrobras {
         flex-direction: column;
-        padding: 8vh 4vw;
+        padding: 8vh 10vw;
         background-size: contain;
         gap: 60px;
     }
@@ -729,7 +752,7 @@ button {
 
     .exacta {
         flex-direction: column;
-        padding: 8vh 4vw;
+        padding: 8vh 10vw;
         background-size: contain;
         gap: 60px;
     }
