@@ -26,12 +26,14 @@ p {
     margin: 0;
     padding: 0;
     max-width: 72ch;
+    line-height: 150%;
 }
 
 i {
     margin: 0;
     padding: 0;
     max-width: 72ch;
+    line-height: 150%;
 }
 
 button {
@@ -125,7 +127,7 @@ button {
     align-items: flex-start;
 
     padding: 0 6vw;
-    gap: 12px;
+    gap: 20px;
     height: 100%;
     background-image: linear-gradient(to right, #ffffff, #c8da2a00);
 }
@@ -141,8 +143,8 @@ button {
 }
 
 .banner .banner-text img {
-    width: 30vw;
-    max-width: 500px;
+    width: 25vw;
+    max-width: 400px;
     animation-name: bannerTextImg;
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
@@ -150,14 +152,15 @@ button {
 }
 
 .banner .banner-text p {
-    width: 40%;
+    width: 50% !important;
+    font-size: 24px;
 }
 
 .banner .banner-text a {
     border: none;
     background-color: #009E49;
     padding: 8px 16px;
-    font-size: 18px;
+    font-size: 24px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-radius: 4px;
     color: white;
@@ -620,7 +623,7 @@ button {
         background-repeat: no-repeat;
         background-size: center;
         background-position: center;
-        height: 50vh;
+        height: 60vh;
     }
 
     .banner .banner-text {
