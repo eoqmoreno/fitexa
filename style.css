@@ -1,3 +1,75 @@
+@font-face {
+    font-family: 'spaceGrotesk';
+    src: url(./assets/font/SpaceGrotesk-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'nunito';
+    src: url(./assets/font/Nunito-VariableFont_wght.ttf);
+}
+
+:root {
+    --AzulClaro: #15BBEE;
+    --AzulEscuro: #195AA9;
+    --Branco: #FFFFFF;
+    --Cinza: #D5D6D8;
+    --CinzaEscuro: #343434;
+    --Roxo: #54499E;
+    --Verde: #89C53F;
+    --Rosa: #F166A7;
+}
+
+.colorAzulClaro {
+    color: var(--AzulClaro);
+}
+
+.colorAzulEscuro {
+    color: var(--AzulEscuro);
+}
+
+.colorBranco {
+    color: var(--Branco);
+}
+
+.colorCinza {
+    color: var(--Branco);
+}
+
+.colorCinzaEscuro {
+    color: var(--CinzaEscuro);
+}
+
+.colorRoxo {
+    color: var(--Roxo);
+}
+
+.colorVerde {
+    color: var(--Verde);
+}
+
+.colorRosa {
+    color: var(--Rosa);
+}
+
+.titulo {
+    font-size: 24px;
+    font-family: 'spaceGrotesk';
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 18px;
+    font-family: 'spaceGrotesk';
+    font-weight: bold;
+    max-width: 600px;
+}
+
+.texto {
+    font-size: 16px;
+    font-family: 'nunito';
+    max-width: 600px;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -9,31 +81,10 @@ html {
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'nunito';
     font-size: 16px;
-    color: #5A5A5A;
+    color: var(--CinzaEscuro);
     scroll-behavior: smooth;
-}
-
-h6 {
-    color: #009E49;
-    font-size: 24px;
-    padding: 0;
-    margin: 0;
-}
-
-p {
-    margin: 0;
-    padding: 0;
-    max-width: 72ch;
-    line-height: 150%;
-}
-
-i {
-    margin: 0;
-    padding: 0;
-    max-width: 72ch;
-    line-height: 150%;
 }
 
 button {
@@ -41,7 +92,7 @@ button {
 }
 
 .header {
-    background-color: #007AC2;
+    background-color: var(--Branco);
     height: 5vh;
     padding: 2vh 6vw;
 
@@ -55,7 +106,7 @@ button {
     z-index: 1;
 
     border-bottom: 4px solid;
-    border-image: linear-gradient(to right, #009E49, #C9DA2A) 1;
+    border-image: linear-gradient(to right, var(--AzulEscuro), var(--AzulClaro), var(--Verde), var(--Rosa), var(--Roxo)) 1;
 }
 
 .header .logo {
@@ -97,7 +148,9 @@ button {
 }
 
 .header .menu-header li a {
-    color: white;
+    font-family: 'spaceGrotesk';
+    font-weight: bold;
+    color: var(--Rosa);
     border-bottom: 3px solid rgba(255, 255, 255, 0);
     text-decoration: none;
 }
@@ -112,12 +165,10 @@ button {
 
 
 .banner {
-    background-image: url(imgs/pexels-william-fortunato-6140676.jpg);
+    background-image: url(./assets/imgs/exa_portraits.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    height: 70vh;
 }
 
 .banner .banner-text {
@@ -127,7 +178,7 @@ button {
     justify-content: center;
     align-items: flex-start;
 
-    padding: 0 6vw;
+    padding: 12vh 6vw;
     gap: 20px;
     height: 100%;
     background-image: linear-gradient(to right, #ffffff, #c8da2a00);
@@ -144,7 +195,7 @@ button {
 }
 
 .banner .banner-text img {
-    width: 25vw;
+    width: 10vw;
     max-width: 400px;
     animation-name: bannerTextImg;
     animation-duration: 2s;
@@ -152,29 +203,21 @@ button {
     animation-fill-mode: forwards;
 }
 
-.banner .banner-text p {
-    width: 50%;
-    font-size: 24px;
-}
-
 .banner .banner-text a {
     border: none;
-    background-color: #009E49;
+    background-color: var(--Rosa);
     padding: 8px 16px;
-    font-size: 24px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-radius: 4px;
-    color: white;
     text-decoration: none;
 }
 
 @keyframes buttonHoverColor {
     from {
-        background-color: #009E49;
+        background-color: var(--Rosa);
     }
 
     to {
-        background-color: #C9DA2A;
+        background-color: var(--Roxo);
     }
 }
 
@@ -188,62 +231,57 @@ button {
 .programa {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    padding: 6vh 6vw;
+    justify-content: center;
 }
 
 .programa .sideA {
-    flex: 0.6;
     display: flex;
     flex-direction: column;
-    padding: 0 6vw;
     justify-content: center;
-    gap: 12px;
-    height: 40vh;
+}
+
+.programa .sideB img {
+    max-height: 300px;
 }
 
 .programa .sideB {
-    flex: 0.4;
+    justify-content: flex-end;
     display: flex;
-    flex-direction: column;
-    padding: 0 6vw;
-    justify-content: center;
-    gap: 12px;
-    background-color: #EDECE3;
 }
+
 
 .descricao {
     display: flex;
     flex-direction: row;
-    padding: 0 4vw;
+    padding: 6vh 6vw;
     justify-content: center;
-    align-items: center;
-    gap: 12px;
-    background-color: #C9DA2A;
-    color: black;
-    height: 20vh;
+    background-color: var(--Rosa);
 }
 
-.descricao p {
-    width: 50vw;
+.descricao .sideA {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
 }
 
-.descricao img {
-    height: 60px;
+.descricao .sideB img {
+    max-height: 300px;
+}
+
+.descricao .sideB {
+    justify-content: flex-start;
+    display: flex;
 }
 
 .datasImportantes {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 8vh 0;
+    padding: 6vh 0;
     gap: 40px;
-    background-color: #007AC2;
-    color: white;
-}
-
-.datasImportantes h6 {
-    color: white;
+    background-color: var(--Roxo);
 }
 
 .datasImportantes .cardGroup {
@@ -268,7 +306,6 @@ button {
     width: 100%;
     font-size: 20px;
     font-weight: bold;
-    /* border-bottom: 3px solid white; */
     text-align: center;
     padding-bottom: 12px;
 }
@@ -305,12 +342,9 @@ button {
 
 .datasImportantes a {
     border: none;
-    background-color: #ffffff;
+    background-color: var(--Verde);
     padding: 8px 16px;
-    font-size: 18px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border-radius: 100px;
-    color: #007AC2;
+    border-radius: 4px;
     text-wrap: nowrap;
     text-decoration: none;
 }
@@ -323,16 +357,11 @@ button {
 }
 
 .diferenciais {
-    padding: 8vh 4vw;
     display: flex;
     flex-direction: column;
-    gap: 40px;
     align-items: center;
-
-}
-
-.diferenciais h6 {
-    color: #5A5A5A;
+    padding: 6vh 6vw;
+    gap: 40px;
 }
 
 .diferenciais .cardGroup {
@@ -357,12 +386,12 @@ button {
     width: 100%;
 }
 
-.eletrobras {
+.exa {
     display: flex;
     flex-direction: row;
-    padding: 8vh 4vw;
-    background-image: url(./imgs/backgroundEletrobras.svg);
-    background-size: auto 100%;
+    padding: 12vh 6vw;
+    background-image: url(./assets/imgs/backgroundExa.svg);
+    background-size: 100% auto;
     background-repeat: no-repeat;
     background-position-y: top;
     background-position-x: left;
@@ -370,81 +399,39 @@ button {
     flex-wrap: wrap;
 }
 
-.eletrobras .sideA {
+.exa .sideA {
     flex-grow: 1;
     flex: 0.5;
     display: flex;
     justify-content: center;
 }
 
-.eletrobras .sideA .video {
+.exa .sideA .video {
     width: 100%;
     aspect-ratio: 16/9;
     border-radius: 10px;
 }
 
-.eletrobras .sideB {
+.exa .sideB {
     flex: 0.5;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    gap: 40px;
-    align-items: flex-start;
-    text-align: left;
-}
-
-
-.eletrobras .sideB img {
-    max-height: 60px;
-}
-
-.cepel {
-    display: flex;
-    flex-direction: row;
-    padding: 8vh 4vw;
-    background-image: url(./imgs/backgroundCEPEL.svg);
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position-y: center;
-    background-position-x: right;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.cepel .sideA {
-    flex-grow: 1;
-    flex: 0.5;
-    display: flex;
-    justify-content: center;
-}
-
-.cepel .sideA .video {
-    width: 100%;
-    aspect-ratio: 16/9;
-    border-radius: 10px;
-}
-
-.cepel .sideB {
-    flex: 0.5;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
     gap: 40px;
-    text-align: left;
+    align-items: flex-end;
+    text-align: right;
 }
 
-
-.cepel .sideB img {
-    max-height: 90px;
+.exa .sideB img {
+    height: 60px;
 }
 
 .exacta {
     display: flex;
     flex-direction: row;
-    padding: 8vh 4vw;
-    background-image: url(./imgs/backgroundExACTa.svg);
-    background-size: auto 100%;
+    padding: 12vh 6vw;
+    background-image: url(./assets/imgs/backgroundExACTa.svg);
+    background-size: 100% auto;
     background-repeat: no-repeat;
     background-position-y: bottom;
     background-position-x: left;
@@ -470,14 +457,13 @@ button {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 40px;
     text-align: left;
 }
 
-
 .exacta .sideB img {
-    max-height: 60px;
+    height: 60px;
 }
 
 .perguntas {
@@ -486,11 +472,7 @@ button {
     align-items: center;
     padding: 8vh 4vw;
     gap: 40px;
-    background-color: #EDECE3;
-}
-
-.perguntas h6 {
-    color: #5A5A5A;
+    background-color: var(--Cinza);
 }
 
 .perguntas .cardGroup {
@@ -505,12 +487,7 @@ button {
     gap: 12px;
     padding-bottom: 12px;
     padding-top: 12px;
-    border-bottom: 2px solid #5A5A5A;
-}
-
-.perguntas .cardGroup .card:hover {
-    box-shadow: 0 0 20px 20px #ffffff85;
-    background-color: #ffffff85
+    border-bottom: 2px solid var(--CinzaEscuro);
 }
 
 .perguntas .cardGroup .card #quem-pode,
@@ -523,9 +500,8 @@ button {
 }
 
 .perguntas .cardGroup .card .title {
-    font-weight: bold;
     cursor: pointer;
-    background-image: url(./imgs/chevron-down.svg);
+    background-image: url(./assets/imgs/chevron-down.svg);
     background-size: 16px 16px;
     background-repeat: no-repeat;
     background-position-x: right;
@@ -535,12 +511,9 @@ button {
 
 .perguntas .button {
     border: none;
-    background-color: #007AC2;
+    background-color: var(--Branco);
     padding: 8px 16px;
-    font-size: 18px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border-radius: 100px;
-    color: white;
+    border-radius: 4px;
     text-decoration: none;
 }
 
@@ -548,7 +521,7 @@ button {
     from {}
 
     to {
-        box-shadow: 0 0 20px 4px #007bc25b;
+        box-shadow: 0 0 20px 4px var(--Branco);
     }
 }
 
@@ -560,7 +533,7 @@ button {
 }
 
 .footer {
-    background-color: #5A5A5A;
+    background-color: var(--CinzaEscuro);
     padding: 8vh 4vw;
     display: flex;
     flex-direction: row;
@@ -570,10 +543,6 @@ button {
 .footer a {
     color: white;
     text-decoration: none;
-}
-
-.footer h6 {
-    color: white;
 }
 
 .footer .sideA {
@@ -598,7 +567,7 @@ button {
 }
 
 .logos {
-    background-color: #5A5A5A;
+    background-color: var(--CinzaEscuro);
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -621,7 +590,7 @@ button {
 
 .move-up img {
     height: 4vh;
-    background-color: #5A5A5A;
+    background-color: var(--Verde);
     border-radius: 100%;
     padding: 1vh;
 }
@@ -665,24 +634,16 @@ button {
         padding: 0;
     }
 
-    .banner {
-        background-image: url(imgs/pexels-william-fortunato-6140676.jpg);
-        background-repeat: no-repeat;
-        background-size: center;
-        background-position: center;
-        height: 80vh;
-    }
-
     .banner .banner-text {
-        padding: 0 10vw;
+        padding: 12vh 10vw;
     }
 
     .banner .banner-text img {
-        width: 50vw;
+        width: 20vw;
     }
 
     .banner .banner-text p {
-        width: 80%;
+        width: 50%;
     }
 
     .programa {
@@ -693,14 +654,13 @@ button {
 
     .programa .sideA {
         flex: 1;
-        padding: 6vh 10vw;
+        padding: 0 10vw;
         margin: auto;
     }
 
     .programa .sideB {
         flex: 1;
-        padding: 6vh 10vw;
-        align-items: center;
+        justify-content: center;
     }
 
     .programa .sideB p {
@@ -709,14 +669,13 @@ button {
 
     .descricao {
         flex-direction: column;
-        padding: 4vh 10vw;
+        padding: 6vh 10vw;
         gap: 40px;
         height: fit-content;
     }
 
-    .descricao p {
-        width: 100%;
-        text-align: center;
+    .descricao .sideB {
+        justify-content: center;
     }
 
     .datasImportantes .cardGroup {
@@ -748,7 +707,7 @@ button {
     }
 
     .diferenciais {
-        padding: 8vh 10vw;
+        padding: 6vh 20vw;
     }
 
     .diferenciais .cardGroup {
@@ -791,29 +750,14 @@ button {
         height: 40px;
     }
 
-    .eletrobras {
+    .exa {
         flex-direction: column;
         padding: 8vh 10vw;
         background-size: contain;
         gap: 60px;
     }
 
-    .eletrobras .sideA .video {
-        width: auto;
-        aspect-ratio: 16/9;
-        border-radius: 10px;
-    }
-
-    .cepel {
-        flex-direction: column;
-        padding: 8vh 10vw;
-        background-size: contain;
-        gap: 60px;
-        background: #EDECE3;
-
-    }
-
-    .cepel .sideA .video {
+    .exa .sideA .video {
         width: auto;
         aspect-ratio: 16/9;
         border-radius: 10px;
@@ -821,11 +765,11 @@ button {
 
     .exacta {
         flex-direction: column;
-        background-image: url(./imgs/backgroundExACTa2.svg);
+        background-image: url(./assets/imgs/backgroundExACTa2.svg);
         padding: 8vh 10vw;
         background-size: contain;
         gap: 60px;
-        flex-flow: column-reverse;
+        flex-flow: column;
     }
 
     .exacta .sideA .video {
