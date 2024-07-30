@@ -203,6 +203,10 @@ button {
     animation-fill-mode: forwards;
 }
 
+.banner .banner-text p {
+    max-width: min(300px, 50%);
+}
+
 .banner .banner-text a {
     border: none;
     background-color: var(--Rosa);
@@ -640,10 +644,6 @@ button {
 
     .banner .banner-text img {
         width: 20vw;
-    }
-
-    .banner .banner-text p {
-        width: 50%;
     }
 
     .programa {
